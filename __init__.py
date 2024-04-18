@@ -1,23 +1,25 @@
-def login(worker):
-    print()
+def login():
+    
 
 def cadastro():
 
 def editar():
 
-def welcome():
+def welcome() -> str:
+    '''
+    '''
   print('SISTEMA EEBA')
   respostas = {
     'Cadastro' : ['CADASTRAR', 'NOVO', 'USUÁRIO', ' USUARIO', '[1]', '1'];
-    'Editar' : ['EDITAR', 'INFORMAÇÕES', 'INFORMACÕES', 'INFORMAÇOES', 'INFORMACOES']  
+    'Editar' : ['EDITAR', 'INFORMAÇÕES', 'INFORMACÕES', 'INFORMAÇOES', 'INFORMACOES', '2', '[2]']  
   }
   welcome = str(input('''[1] Cadastrar novo Usuário 
 [2] Editar informações
 -->''')).upper().split(' ')
   if map(welcome) in respostas['Cadastro']:
-    cadastro()
+    return 'CADASTRO'
   elif welcome in respostas['Editar']:
-    editar()
+    return 'EDITAR'
 
 def main():
-        
+    login()
